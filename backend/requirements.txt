@@ -1,0 +1,10 @@
+fastapi==0.115.*
+uvicorn[standard]==0.30.*
+pydantic==2.*
+openpyxl==3.1.*
+pdfplumber==0.11.*
+pyyaml==6.*
+python-dotenv==1.*
+scikit-learn==1.*
+openai==1.*
+pytest==8.*

@@ -1,0 +1,76 @@
+# Document registry — every field below was verified directly against the
+# actual PDF content (see schema-verification step in project history).
+# Do not add entries here without opening and reading the source file first.
+#
+# authority_rank: lower number = higher authority.
+#   1 = customer-specific agreement
+#   2 = current policy / current SOP
+#   3 = current product documentation
+#   4 = deprecated policy
+#   5 = historical ticket resolution (handled separately, not a document here)
+
+documents:
+  - source_id: doc_support_policy_v3
+    filename: "01_Support_Policy_v3_CURRENT.pdf"
+    document_type: support_policy
+    version: 3
+    status: current
+    effective_date: "2026-05-01"
+    supersedes: doc_support_policy_v2
+    customer_scope: null   # applies to all accounts unless a customer agreement overrides it
+    authority_rank: 2
+
+  - source_id: doc_support_policy_v2
+    filename: "02_Support_Policy_v2_DEPRECATED.pdf"
+    document_type: support_policy
+    version: 2
+    status: deprecated
+    effective_date: "2025-01-01"
+    superseded_by: doc_support_policy_v3
+    customer_scope: null
+    authority_rank: 4
+
+  - source_id: doc_cancellation_sop_v4
+    filename: "03_Cancellation_and_Service_Credit_SOP_v4.pdf"
+    document_type: sop
+    version: 4
+    status: current
+    effective_date: "2026-06-15"
+    customer_scope: null
+    authority_rank: 2
+
+  - source_id: doc_product_ops_guide
+    filename: "04_Product_Operations_Guide_and_Known_Issues.pdf"
+    document_type: product_ops_guide
+    version: null
+    status: current
+    effective_date: "2026-08-14"   # printed as "Updated"
+    customer_scope: null
+    authority_rank: 3
+
+  - source_id: doc_agreement_acct_001
+    filename: "05_Northstar_Logistics_Enterprise_Agreement.pdf"
+    document_type: customer_agreement
+    version: null
+    status: active
+    effective_date: "2026-01-01"
+    term_end: "2026-12-31"
+    customer_scope: "ACCT-001"
+    authority_rank: 1
+
+  - source_id: doc_agreement_acct_002
+    filename: "06_LumenWorks_Service_Agreement.pdf"
+    document_type: customer_agreement
+    version: null
+    status: active
+    effective_date: "2026-03-01"
+    term_end: "2027-02-28"
+    customer_scope: "ACCT-002"
+    authority_rank: 1
+
+# Accounts without an entry above (ACCT-003 Beacon Retail, ACCT-004 Axis Labs)
+# have no customer-specific agreement in the supplied pack — confirmed against
+# accounts.contract_file being null for both in the workbook. Standard policy applies.
+
+dataset_snapshot_time: "2026-08-16T11:00:00+05:30"   # from workbook README sheet, Asia/Kolkata
+currency: "INR"

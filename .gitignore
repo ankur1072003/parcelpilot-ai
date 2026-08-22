@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+data/parcelpilot.db
+data/actions.db
+data/doc_index.pkl
+.env
+*.egg-info/
