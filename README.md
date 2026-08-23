@@ -149,7 +149,6 @@ See `docs/ARCHITECTURE.md`.
   using OpenAI's gpt-4o via `OPENAI_API_KEY`. Every deterministic component (ingestion, tools,
   authorization, source authority, action confirmation, ops insights) passes the full test suite
   without a key.
-- No demo video is included yet.
 - Proactive issue detection is intentionally simple keyword-based clustering, not ML.
 - Retrieval is TF-IDF, not embeddings (see Technology Stack rationale).
 
@@ -172,4 +171,4 @@ request after idle time may take 30–50 seconds to respond while the instance w
 
 ## Demo Video
 
-_Not yet recorded — see Known Limitations._
+https://www.loom.com/share/04d346f92ff047658c2ef9612fe9496b
